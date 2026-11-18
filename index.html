@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recurso interactivo para aprender las clases y familias de la Parte 2 de Common Criteria v3.1.">
+  <title>Common Criteria · Parte 2 | Guía interactiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true" id="brandIcon"></span>
+      <div class="brand-copy">
+        <p class="eyebrow">Common Criteria v3.1 · Parte 2</p>
+        <h1>Requisitos funcionales de seguridad</h1>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <div class="progress" title="Progreso del recurso">
+        <div class="progress-track"><span id="progressFill"></span></div>
+        <span class="progress-label" id="progressLabel">0%</span>
+      </div>
+      <button type="button" class="icon-button" id="themeToggle" aria-label="Activar modo oscuro" title="Cambiar tema"></button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegación del recurso">
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot">
+        <span class="sidebar-stat" id="statClasses">11 clases</span>
+        <span class="sidebar-stat" id="statFamilies">66 familias</span>
+        <button type="button" class="text-button" id="resetProgress">Reiniciar progreso</button>
+      </div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <section class="view" id="view-inicio" data-view="inicio" aria-labelledby="title-inicio"></section>
+      <section class="view" id="view-conceptos" data-view="conceptos" aria-labelledby="title-conceptos" hidden></section>
+      <section class="view" id="view-catalogo" data-view="catalogo" aria-labelledby="title-catalogo" hidden></section>
+      <section class="view" id="view-practica" data-view="practica" aria-labelledby="title-practica" hidden></section>
+      <section class="view" id="view-evaluacion" data-view="evaluacion" aria-labelledby="title-evaluacion" hidden></section>
+      <section class="view" id="view-resumen" data-view="resumen" aria-labelledby="title-resumen" hidden></section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/icons.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
